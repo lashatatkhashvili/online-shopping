@@ -317,6 +317,13 @@
      </div>
    </footer>
 <!-- javascript -->
+<script>
+   const button = document.querySelector(".nav-toggle");
+   const dropdown = document.querySelector(".menu")
 
+   button.addEventListener("click", () => {
+    dropdown.classList.toggle("show-navbar")
+   })
+</script>
 </body>
 </html>
