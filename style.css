@@ -1,0 +1,564 @@
+/* Header */
+.navbar{
+    display: flex;
+    flex-direction: row;
+    margin-left: -1%;
+    margin-top: -1%;
+    width: 102%;
+    background-color: rgb(255, 253, 253);
+}
+
+.navbar h1{
+    font-size: 38px;
+    margin-left: 7.6%;
+    margin-top: 1.2%;
+    
+}
+
+.navbar h1 a{
+    color: rgb(228, 154, 17);
+    font-family:   serif;
+    text-decoration: none;
+}
+
+.search{
+    border-radius: 25px;
+    margin-left: 1%;
+    width:66%;
+    height: 35px;
+    margin-top: 1.3%;
+    border: 1px #000 solid;
+    padding: 5px 5px 5px 25px; 
+    font-size: 15px;
+    background-color: rgb(221, 221, 221);
+    z-index: 5;
+   
+}
+
+.search:focus{
+    outline:0;
+}
+.btn{
+    position: absolute;
+    height: 35px;
+    width: 3%;
+    margin-top: 1.7%;
+    margin-left: 79%;
+    border:none;
+    z-index: 10;
+    background: none;
+}
+
+.btn:focus {
+    outline:0;
+}
+.btn:hover{
+    color: rgb(114, 24, 74);
+    cursor: pointer;
+}
+
+.btnSign{
+    background: none;
+    border: none;
+    margin-left: 2.1%;
+    margin-top: -0.4%;
+    font-size: 17px;    
+}
+
+.btnSign:focus{
+    outline: 0;
+}
+
+.btnSign a {
+    text-decoration:none;
+    color: black;
+ }
+
+.btnBasket{
+    background: none;
+    border: none;
+    margin-left: 2%;
+    margin-top: -0.4%;
+}
+.btnBasket:hover{
+    color: rgb(29, 13, 22);
+    cursor: pointer;
+}
+.btnBasket:focus{
+    outline: 0;
+}
+
+/*<!-- dropdown menu--> */
+
+.dropdown{
+    text-align: center;
+}
+
+.dropdown ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: grey;
+    margin-top: -15px;
+    
+}
+
+.dropdown ul li{
+    width: 60%;
+    padding: 20px;
+    
+}
+
+.dropdown ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+   
+}
+
+.dropdown ul li:hover{
+    text-decoration: underline;
+    
+}
+
+.sub-menu-1{
+    display: none;
+    background-color:white;
+    width:23%;
+}
+
+.dropdown ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -55px;
+    
+}
+
+.dropdown ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 20px;
+
+}
+
+.sub-menu-1 ul li:hover{
+    background: rgb(197, 197, 197);
+    text-decoration: none;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+
+/* Only on tink section */
+.popular{
+    text-align: center;
+    background-color: rgb(211, 226, 255);
+    width:102%;
+    margin-left: -1%;
+    margin-top:-1%;
+}
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.images img{
+    width:160px;
+    height: 160px;
+    border-radius: 50%;
+    padding:25px;
+}
+
+.img-text{
+    display: block;
+}
+
+.img-text a{
+    text-decoration: none;
+    color: black;
+}
+
+.arrow{
+    margin-left: 6px;
+}
+
+.img-text:hover .arrow{
+    margin-left: 15px;
+}
+
+/* Shop our selections */
+.selection-box{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 20px 10px;
+}
+.selection-text{
+    display: block;
+    width: 300px;
+    padding-left: 150px;
+}
+
+.selection-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+.selection-images img{
+    width:180px;
+    height: 180px;
+    padding:25px;
+}
+
+.selection-images-text{
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.selection-images-text p{ 
+    margin-left: 25px;
+    margin-top:-20px
+}
+
+.selection-images-text a{ 
+    text-decoration: none;
+    color: black;
+}
+
+/*media Shop our selections */
+@media only screen and (max-width: 1350px) {
+    
+    .selection-text{
+        
+        width: 100%;
+        padding: 5px;
+        
+    }
+    .selection-images-text{
+        box-shadow: none;
+        
+    }
+    .selection-images{
+        display: grid;
+        grid-template-columns: 340px 340px 340px;
+        grid-gap: 30px 40px;
+        margin-left: -30px;
+    
+    }
+    .selection-images img{
+        width:100%;
+        
+    }    
+}
+@media only screen and (max-width: 1100px) {
+    .selection-images{
+        grid-template-columns: 220px 220px 220px;
+        margin-left: -30px;
+        
+    }
+}
+@media only screen and (max-width: 750px) {
+    .selection-images{
+        grid-template-columns: 150px 150px 150px;
+        margin-left: -30px;
+        grid-gap: 10px 10px;
+    }
+}
+
+/* Shop our selections for mobile */
+@media only screen and (max-width: 400px) {
+    .selection-text{
+    width:85px;
+  }
+    .selection-images{
+        grid-template-columns: 85px 85px 85px;
+        grid-gap: 15px;
+        margin-left: -50px;
+        
+    }
+  .selection-text h1{
+    display:block;
+    font-size: 17px;
+  }
+    
+ }
+/* media only on tink section */
+
+@media only screen and (max-width: 1200px) {
+    .popular{
+     width: 103%;
+    }
+    .images{
+    display: grid;
+    grid-template-columns: 260px 260px 260px;
+    grid-gap: 10px 10px;
+  }
+   
+  .images img{
+      margin-left: -20px;
+      width:90%;
+       
+  }
+  
+}
+@media only screen and (max-width: 750px) {
+   
+    .images{
+    
+    grid-template-columns: 180px 180px 180px;
+    
+  }   
+  
+  
+}
+/* only on tink section for mobile */
+@media only screen and (max-width: 400px) {
+   .popular{
+    width: 104%;
+    margin-top: -15px;
+    margin-left: -2%;
+  }
+   .images{
+    display: grid;
+    grid-template-columns: 85px 85px 85px;
+    grid-gap: 15px;
+     
+  }
+   
+  .images img{
+      margin-left: -20px;
+      height: 90px;    
+  }
+}
+/*  about Tink  */
+ .about{
+     text-align: center;
+     margin-left: -1%;
+     width: 102%;
+     background-color: rgb(255, 227, 227);
+     height: 700px;
+ 
+ }
+ .about h1{
+     font-size: 40px;
+     color: rgba(0, 0, 0, 0.678);
+ }
+ .about p{
+    color: black;
+    margin-top: -20px;
+}
+.tink{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+ }
+.about-text{
+    width: 40%;
+}
+
+.about h2{
+    color: rgba(0, 0, 0, 0.856);
+}
+.help-button{
+    border-radius: 25px;
+    width:200px;
+    height: 50px;
+    border: 2px #000 solid;
+    font-size: 18px;
+    background-color: rgb(221, 221, 221);   
+}
+
+.help-button:hover{
+    border: 2px rgba(8, 4, 4, 0.562) solid;
+    cursor: pointer;
+}
+
+.help-button:focus{
+    outline: 0;
+}
+
+/* media about tink */
+@media only screen and (max-width: 650px) {
+    .about h1{
+        font-size: 30px;   
+    }
+
+}
+/* media navbar  */
+
+  @media only screen and (max-width: 600px) {
+    
+    
+    .menu {
+        display: none;
+        
+    }
+    .btn{
+        margin-left: 67%;
+        margin-top: 11%;
+    }
+    .nav-toggle{
+     display: block;
+     margin-top: -8%;
+     margin-left: 11%;
+    }
+    .search{
+        margin-top: 10%;
+    }
+    .show-navbar {
+        display: block;
+      width: 86%;
+      }
+    .dropdown{
+        position:relative;
+        display: inline-block;
+        background-color: rgb(185, 185, 185);
+        width: 120%;
+        height: 500px;
+        margin-left: -10px;
+        margin-top: 10px;
+        z-index:10;
+        
+    }
+    .dropdown ul{
+        display: block; 
+        list-style: none;
+        color: rgb(177, 177, 177);
+        margin-top: -15px;
+        margin-left:-19%; 
+         
+    }
+    .dropdown ul li{
+        width: 100%;
+        padding: 5px;
+        
+        
+    }
+    .dropdown ul li a{
+        display: block;
+        padding: 5px 5px;
+        text-decoration: none;
+        border: none;
+        font-size: 25px; 
+        margin-top: 5px;
+        
+    }
+    .dropdown ul li:hover .sub-menu-1{
+        display: none;
+        
+        
+    }
+    
+    .dropdown ul li:hover .sub-menu-1 ul{
+        display: none;
+        
+    
+    }
+  
+  }
+
+@media only screen and (max-width: 400px) {
+   
+  .navbar{ 
+    width:100%;
+  }
+  .navbar h1{
+    width:60%;
+    font-size: 35px;
+    margin-left:1px;
+  }
+  .btnSign{
+    width:100%;
+    margin-top:-20px;
+    margin-left:60px;
+    font-size:12px;
+    text-align:end;
+  }
+  .btnBasket{
+    width:100%;
+    text-align:end;
+    margin-top:-20px; 
+    margin-left:-80px;
+  }
+  .search{
+   position: absolute;
+   width:72%;
+   height:20px;
+   margin-top:17%;
+   margin-left:49px;
+    
+    
+  }
+  .nav-toggle{
+    margin-left:-2px;
+    width:14%;
+    height:40px;
+  }
+  .btn{
+    margin-top:55px;
+    margin-left:75%;
+    width:20%;
+    height:30px;
+    
+  }
+  
+}
+
+/* footer */
+.container{
+    width: 102%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(26, 26, 41, 0.651);
+    margin-top: -0.1%;
+    margin-left: -1%;
+}
+
+.lists{
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.lists p{
+    font-size: 25px;
+    margin-left: 9%;
+    color: white;
+}
+.lists li{
+    list-style: none;
+    margin: 20px;
+    color: white;  
+}
+
+.lists li:hover{
+    cursor: pointer;
+    text-decoration: underline; 
+}
+
+
+@media only screen and (max-width: 450px) {
+   
+  .about{
+    width:295px;
+    height:auto;
+    margin-left:10px;
+    
+  }
+  .tink{
+    width:85%;
+    margin-left:-5%;
+  }
+  .about h1{
+     font-size: 20px;
+     color: rgba(0, 0, 0, 0.678);
+ }
+  .container{
+    display:none;
+  }
+}
